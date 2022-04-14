@@ -66,12 +66,12 @@ function App() {
         <Taskinput value={value} handleInput = {handleInput} handleAddTask = {handleAddTask}/>
         <Tasklist status={status} tasks={tasks} changeStatus={changeStatus} removeTask={removeTask}/>
 
-        {tasks.filter((task) => task.status).length ? <button onClick={clearCompleted}>Remove Completed</button>: ''}
+        {tasks.filter((task) => task.status).length ? <button className='remove' onClick={clearCompleted}>Remove Completed</button>: ''}
 
         <div>
-            <button onClick={() => setStatus('all')}>All</button>
-            <button onClick={() => setStatus(false)}>Active</button>
-            <button onClick={() => setStatus(true)}>Done</button>
+            <button className='button' onClick={() => setStatus('all')}>All</button>
+            <button className='button' onClick={() => setStatus(false)}>Active</button>
+            <button className='button' onClick={() => setStatus(true)}>Done</button>
         </div>
 
 
